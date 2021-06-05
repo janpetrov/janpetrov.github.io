@@ -1,0 +1,151 @@
+
+body {
+    background-color: lavender;
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    background-color: floralwhite;
+    width: 100vw;
+    height: 69vw;
+    margin: 0;
+    padding: 0;
+}
+
+.maindrag {
+    background-color: #ffcd39;
+}
+
+svg {
+    position: absolute;
+    left: 14.6vw;
+    top: -1.9vw;
+}
+
+svg circle {
+    filter: drop-shadow(1px 1px 3px rgba(0,0,0,0.275));
+    cursor: pointer;
+}
+
+svg line {
+    stroke: black;
+    stroke-width: 0.35vw;
+    stroke-linecap: round;
+}
+
+.note {
+    position: absolute;
+    left: 0;  /* positioning created programmatically using CSS transform */
+    top: 0;
+    width: 15vw;
+    height: 15vw;
+    border-width: 0.25vw;
+    border-style: solid;
+    border-color: rgba(100, 149, 237, 0.0);
+    transition: border-color 0.4s, background-color 0.1s;
+    -webkit-transition: border-color 0.4s, background-color 0.1s;
+    border-radius: 5% 5% 15% 5%;
+    box-shadow: 1px 1px 8px rgba(0,0,0,0.275);
+    padding: 0.75vw;
+}
+
+.note:hover {
+    border-color: rgba(100, 149, 237, 1);
+}
+
+textarea {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    resize: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    box-shadow: none;
+    font-size: 1.42vw;
+    letter-spacing: 0.04vw;
+    line-height: 1.85vw;
+    font-family: "Courier", monospace;
+    -webkit-transition: border 0.2s;
+    transition: border 0.2s;
+}
+
+.note[data-scheme=yellow] {
+    background-color: #ffff99;
+}
+.note[data-scheme=blue] {
+    background-color: lightskyblue;
+}
+.note[data-scheme=red] {
+    background-color: #ffa280;
+}
+.note[data-scheme=green] {
+    background-color: lightgreen;
+}
+.note[data-scheme=fuchsia] {
+    background-color: #f29df2;
+}
+.note[data-scheme=redflash] {
+    background-color: rgba(255, 0, 0, 1);
+}
+
+.note[data-scheme=infonote] {
+    background-color: rgb(247, 242, 233);
+    display: flex;
+    flex-direction: column;
+}
+
+.noneinput {
+    display: none;
+}
+
+.switch {
+    font-family: "Courier", monospace;
+    font-size: 1.42vw;
+    line-height: 3vw;
+    width: 4vw;
+    color: #b37524;
+    cursor: pointer;
+}
+
+input:checked ~ .switch {
+    color: black;
+}
+
+.slider::after {
+    font-family: "Courier", monospace;
+    font-size: 1.42vw;
+    content: "";
+    transform: translate(0.5vw, 0vw);
+    -webkit-tranform: translate(0.5vw, 0vw);
+    -ms-transform: translate(0.5vw, 0vw);
+    left: 0.5vw;
+    color: gray;
+}
+
+input:checked ~ .slider::after {
+    content: " proceed";
+    color: red;
+    cursor: pointer;
+}
+
+.save {
+    font-family: "Courier", monospace;
+    line-height: 3vw;
+    font-size: 1.42vw;
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+    display: inline;
+    width: 4vw;
+}
+
+.draginfo {
+    font-family: "Courier", monospace;
+    font-size: 1.42vw;
+    line-height: 3vw;
+    width: 14vw;
+    color: gray;
+}
