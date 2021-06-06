@@ -124,11 +124,20 @@ class Note {
         });
 
         // avoid adding more lines (or characters) if the note (or its line) would overflow
-        this.textarea.addEventListener('keypress', event => {
+        this.textarea.addEventListener('keydown', event => {
             let before = this.textarea.value.slice(0, this.textarea.selectionStart);
             let after = this.textarea.value.slice(this.textarea.selectionEnd);
 
-            if (event.key==='Enter') {
+            if (event.ctrlKey) {
+                const scheme = Constants.KEYCODES[event.key];
+                if (scheme !== undefined) {
+                    this.scheme = scheme;
+                    this.el.dataset.scheme = scheme;
+                    this.storeFunction(true);
+                    event.preventDefault();
+                }
+            }
+            else if (event.key==='Enter') {
                 let txt = before + after;
                 let linesArray = txt.split(/\r\n|\n|\r/gm);
                 if (linesArray.length >= Constants.MAX_LINES) {

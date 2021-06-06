@@ -4,7 +4,7 @@
  * has a special color (to visually differ from usual notes).
  */
 class Infonote extends Note{
-    /** The InfoNote constructor does not (unlike the Note constructor) accept
+     /** The InfoNote constructor does not (unlike the Note constructor) accept
      * loadObj as its parameter. The reason is that only parameters relevant for the state of the
      * infoNote are its coordinates, which already are constructor parameters.
      * @param managers object with dragManager, colorAssigner, zAssigner, removeFunction,
@@ -44,7 +44,8 @@ class Infonote extends Note{
         span.classList.add('slider');
         span.addEventListener('click', e => {
             if (checkbox.checked) {
-                checkbox.checked = false;
+                const audio = document.querySelector('audio');
+                audio.play();
                 this.removeFunction();
                 this.storeFunction(true);
             }
@@ -73,6 +74,15 @@ class Infonote extends Note{
         dragInfo.classList.add('draginfo');
         dragInfo.innerText = 'load: drag&drop';
         this.el.appendChild(dragInfo);
+
+        // add drag and drop info
+        let infoFile = document.createElement('a');
+        infoFile.classList.add('save');
+        infoFile.style.width = '9.5vw';
+        infoFile.innerText = 'user guide';
+        infoFile.setAttribute('download', 'readme.txt');
+        infoFile.setAttribute('href', 'readme.txt');
+        this.el.appendChild(infoFile);
     }
 
     /**

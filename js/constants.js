@@ -8,6 +8,12 @@ const Constants = {
     COLORS: ['yellow', 'blue', 'red', 'green', 'fuchsia'],
 
     /**
+     * keycodes (shortcuts for setting note to a particular color)
+     */
+    KEYCODES: {y: 'yellow', b: 'blue', r: 'red', g: 'green', f: 'fuchsia',
+               Y: 'yellow', B: 'blue', R: 'red', G: 'green', F: 'fuchsia'},
+
+    /**
      * color of the info-panel
      */
     INFO_SCHEME: 'infonote',
