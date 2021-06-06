@@ -59,6 +59,11 @@ const Constants = {
     INFO_TOP_VW: 59,
 
     /**
+     * Size of the tiny gap between border edge and note edge
+     */
+    EDGE_GAP: 0.1,
+
+    /**
      * height of the board in vw (width is 100vw)
      */
     BOARD_HEIGHT: 69,  // to fit 4 notes vertically
