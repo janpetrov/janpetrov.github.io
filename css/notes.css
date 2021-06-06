@@ -117,18 +117,19 @@ input:checked ~ .switch {
 .slider::after {
     font-family: "Courier", monospace;
     font-size: 1.42vw;
+    line-height: 3vw;
     content: "";
     transform: translate(0.5vw, 0vw);
     -webkit-tranform: translate(0.5vw, 0vw);
     -ms-transform: translate(0.5vw, 0vw);
     left: 0.5vw;
     color: gray;
+    cursor: pointer;
 }
 
 input:checked ~ .slider::after {
     content: " proceed";
     color: red;
-    cursor: pointer;
 }
 
 .save {

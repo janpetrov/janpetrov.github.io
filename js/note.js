@@ -213,8 +213,7 @@ class Note {
     };
 
     /**
-     * Adds functionality that the closing cross (at top-right corner) fades in as soon as
-     * the user hovers over the note
+     * Adds the closing cross at the top right corner and all related animations.
      */
     addClosingSVG() {
         const svgURI = 'http://www.w3.org/2000/svg';
