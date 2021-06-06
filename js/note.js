@@ -312,8 +312,8 @@ class Note {
         let leftOff = leftVw - this.offsetXVw;
         let topOff = topVw - this.offsetYVw;
         let clampValue = (value, min, max) => Math.min(Math.max(value, min), max);
-        let leftLim = clampValue(leftOff, 0, 100 - Constants.NOTE_WIDTH);
-        let topLim = clampValue(topOff, 0, Constants.BOARD_HEIGHT - Constants.NOTE_HEIGHT);
+        let leftLim = clampValue(leftOff, 0.1, 99.9 - Constants.NOTE_WIDTH);
+        let topLim = clampValue(topOff, 0.1, Constants.BOARD_HEIGHT - Constants.NOTE_HEIGHT - 0.1);
         ['transform', '-webkit-transform', '-ms-transform'].forEach(transform => {
             this.el.style[transform] = `translate(${leftLim.toFixed(2)}vw,` +
                 `${topLim.toFixed(2)}vw)`;
