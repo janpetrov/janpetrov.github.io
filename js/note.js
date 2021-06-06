@@ -294,6 +294,7 @@ class Note {
         this.svgTopVoidCircle.addEventListener('click', event => {
             this.storeFunction(true);
             this.removeFunction(this);
+            this.storeFunction();
             event.stopPropagation();
         });
     }
