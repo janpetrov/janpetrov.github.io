@@ -67,7 +67,8 @@ textarea {
     font-size: 1.42vw;
     letter-spacing: 0.04vw;
     line-height: 1.85vw;
-    font-family: "Courier", monospace;
+    font-family: "Courier New", monospace;
+    font-weight: 700;
     -webkit-transition: border 0.2s;
     transition: border 0.2s;
 }
@@ -102,7 +103,8 @@ textarea {
 }
 
 .switch {
-    font-family: "Courier", monospace;
+    font-family: "Courier New", monospace;
+    font-weight: 700;
     font-size: 1.42vw;
     line-height: 3vw;
     width: 4vw;
@@ -115,7 +117,8 @@ input:checked ~ .switch {
 }
 
 .slider::after {
-    font-family: "Courier", monospace;
+    font-family: "Courier New", monospace;
+    font-weight: 700;
     font-size: 1.42vw;
     line-height: 3vw;
     content: "";
@@ -134,6 +137,7 @@ input:checked ~ .slider::after {
 
 .save {
     font-family: "Courier", monospace;
+    font-weight: 700;
     line-height: 3vw;
     font-size: 1.42vw;
     text-decoration: none;
@@ -144,7 +148,8 @@ input:checked ~ .slider::after {
 }
 
 .draginfo {
-    font-family: "Courier", monospace;
+    font-family: "Courier New", monospace;
+    font-weight: 700;
     font-size: 1.42vw;
     line-height: 3vw;
     width: 14vw;
