@@ -33,9 +33,9 @@ Board width is always fits the width of your browser window (thus the board is a
 visible in the horizontal direction, without any need to scroll it horizontally). As you
 resize the board, all notes scale appropriately. Please choose the width of you browser window
 to get preferred scale of your notes.
-    Height of the board equals 69 % of the width. This rectangular setting usually makes
-the whole board visible also in the vertical direction. Otherwise, please reduce the width
-of your browser window or scroll vertically.
+    Height of the board equals 69 % of the width. You may wish to reduce the width of your
+browser to make the whole board visible also in the vertical direction (that is, to avoid
+the need of scrolling).
     You can use the application also from your cell phone. Most users are likely to prefer
 the landscape orientation.
 
